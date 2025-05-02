@@ -47,7 +47,7 @@ gz sdf -p urdf/f450b.urdf > models/f450b/model.sdf
 
 ## 🌍 Paso 4: Cambiar ruta del modelo en el mundo
 
-Edita el archivo `worlds/empty_world.world` y reemplaza la antigua referencia del modelo F450 por la nueva. Asegúrate de que se vea así:
+Edita el archivo `worlds/empty_world.world` y reemplaza la antigua referencia del modelo F450 por la nueva. 
 
 ```xml
 <include>
