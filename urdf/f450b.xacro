@@ -1,0 +1,524 @@
+<?xml version="1.0" ?>
+<robot name="f450b" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find f450_base)/urdf/materials.xacro" />
+<xacro:include filename="$(find f450_base)/urdf/f450b.trans" />
+<xacro:include filename="$(find f450_base)/urdf/f450b.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0001563325677159355 0.0019454641708941268 0.008011884215420224" rpy="0 0 0"/>
+    <mass value="0.16180101306018108"/>
+    <inertia ixx="0.000236" iyy="0.000237" izz="0.000474" ixy="-0.000106" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="arm_2">
+  <inertial>
+    <origin xyz="0.068360672390792 0.010577406778874534 0.029122685883939594" rpy="0 0 0"/>
+    <mass value="0.19520309289922932"/>
+    <inertia ixx="3.8e-05" iyy="0.000921" izz="0.000922" ixy="3e-06" iyz="-0.0" ixz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.056192 0.009351 -0.008919" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.056192 0.009351 -0.008919" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="arm_3">
+  <inertial>
+    <origin xyz="-0.06848042265090791 -0.010621388792636521 0.02882417021128861" rpy="0 0 0"/>
+    <mass value="0.19520309289922932"/>
+    <inertia ixx="3.8e-05" iyy="0.000921" izz="0.000922" ixy="3e-06" iyz="0.0" ixz="-1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0566 -0.013243 -0.008704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0566 -0.013243 -0.008704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="arm_4">
+  <inertial>
+    <origin xyz="-0.011100166262585937 -0.06837613208364918 0.02889807701551922" rpy="0 0 0"/>
+    <mass value="0.19520309289922932"/>
+    <inertia ixx="0.000921" iyy="3.8e-05" izz="0.000922" ixy="-3e-06" iyz="-1.8e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.010757 0.054516 -0.008792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.010757 0.054516 -0.008792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="arm_5">
+  <inertial>
+    <origin xyz="-0.010658560534006191 0.06839888433381819 0.029003407517424702" rpy="0 0 0"/>
+    <mass value="0.19520309289922932"/>
+    <inertia ixx="0.000921" iyy="3.8e-05" izz="0.000922" ixy="-3e-06" iyz="1.7e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.009314 -0.058367 -0.008874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.009314 -0.058367 -0.008874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/arm_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="base_top_v10_1">
+  <inertial>
+    <origin xyz="-0.06251189150838855 -0.0010219774903443958 0.0006700984655056488" rpy="0 0 0"/>
+    <mass value="0.1026092055375283"/>
+    <inertia ixx="9.2e-05" iyy="9.2e-05" izz="0.000184" ixy="-3e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.061525 -0.001423 -0.047939" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/base_top_v10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.061525 -0.001423 -0.047939" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/base_top_v10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="motor_3">
+  <inertial>
+    <origin xyz="-3.09526771888613e-05 -1.1568468838710037e-05 0.014843253589676232" rpy="0 0 0"/>
+    <mass value="0.08230746374848247"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.22656 -0.002921 -0.043096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.22656 -0.002921 -0.043096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="motor_2">
+  <inertial>
+    <origin xyz="-3.097451546599987e-05 -1.0986214982688924e-05 0.014843487748542085" rpy="0 0 0"/>
+    <mass value="0.08230746374848247"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000658 0.224365 -0.043389" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_description)/meshes/motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000658 0.224365 -0.043389" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="motor_4">
+  <inertial>
+    <origin xyz="-3.0806533986266205e-05 -1.1698907832526583e-05 0.014843625309392629" rpy="0 0 0"/>
+    <mass value="0.08230746374848247"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.226009 -0.000919 -0.044027" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.226009 -0.000919 -0.044027" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="motor_1">
+  <inertial>
+    <origin xyz="-3.0761232185650507e-05 -1.1546897757841457e-05 0.014843019588242544" rpy="0 0 0"/>
+    <mass value="0.08230746374848247"/>
+    <inertia ixx="1.2e-05" iyy="1.2e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001053 -0.22823 -0.043732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001053 -0.22823 -0.043732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="propellor_1_1">
+  <inertial>
+    <origin xyz="-2.1203933977420597e-05 -5.4492414743503165e-06 0.006659753036161328" rpy="0 0 0"/>
+    <mass value="0.04596832624465719"/>
+    <inertia ixx="2e-06" iyy="0.000173" izz="0.000173" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.226624 -0.002897 -0.074096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.226624 -0.002897 -0.074096" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="propellor_2_2">
+  <inertial>
+    <origin xyz="-2.0559666656236363e-05 -8.775987938303142e-07 0.010182800691096797" rpy="0 0 0"/>
+    <mass value="0.04864675101365255"/>
+    <inertia ixx="0.000173" iyy="2e-06" izz="0.000173" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001117 -0.228206 -0.074732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001117 -0.228206 -0.074732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="propellor_1_2">
+  <inertial>
+    <origin xyz="-1.3434893079237076e-05 -1.2514295851306922e-05 0.006659998211777041" rpy="0 0 0"/>
+    <mass value="0.04596832624465719"/>
+    <inertia ixx="0.000173" iyy="2e-06" izz="0.000173" ixy="-1e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000722 0.224388 -0.074389" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000722 0.224388 -0.074389" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+<link name="propellor_2_1">
+  <inertial>
+    <origin xyz="-2.0604968456766626e-05 -1.0296088685228131e-06 0.010183406412246923" rpy="0 0 0"/>
+    <mass value="0.04864675101365255"/>
+    <inertia ixx="0.000173" iyy="2e-06" izz="0.000173" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.225945 -0.000895 -0.075027" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.225945 -0.000895 -0.075027" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find f450_base)/meshes/propellor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+  <enable_wind>1</enable_wind> 
+</link>
+
+
+<!-- Link del IMU -->
+<link name="imu_link">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.01"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0"
+             iyy="1e-6" iyz="0"
+             izz="1e-6"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.01 0.01"/>
+    </geometry>
+  </collision>
+</link>
+
+<!-- Unión del IMU al cuerpo principal -->
+<joint name="imu_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="imu_link"/>
+  <origin xyz="0 0 0.02" rpy="0 0 0"/>
+</joint>
+
+<!-- Definición del sensor IMU con plugin para Gazebo -->
+<gazebo reference="imu_link">
+  <sensor name="imu_sensor" type="imu">
+    <pose>0 0 0 0 0 0</pose>
+    <always_on>true</always_on>
+    <update_rate>100</update_rate>
+    <visualize>false</visualize>
+    <topic>imu</topic>
+    <plugin name="gz::sim::systems::Imu" filename="gz-sim-imu-system"/>
+  </sensor>
+</gazebo>
+
+
+<joint name="r_1" type="fixed">
+  <origin xyz="0.056192 -0.009351 0.008919" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_2"/>
+</joint>
+
+<joint name="r_2" type="fixed">
+  <origin xyz="-0.0566 0.013243 0.008704" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_3"/>
+</joint>
+
+<joint name="r_3" type="fixed">
+  <origin xyz="0.010757 -0.054516 0.008792" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_4"/>
+</joint>
+
+<joint name="r_4" type="fixed">
+  <origin xyz="0.009314 0.058367 0.008874" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_5"/>
+</joint>
+
+<joint name="r_5" type="fixed">
+  <origin xyz="0.005333 0.010774 0.03902" rpy="0 0 0"/>
+  <parent link="arm_2"/>
+  <child link="base_top_v10_1"/>
+</joint>
+
+<joint name="r_8" type="fixed">
+  <origin xyz="-0.16996 -0.010322 0.034392" rpy="0 0 0"/>
+  <parent link="arm_3"/>
+  <child link="motor_3"/>
+</joint>
+
+<joint name="r_9" type="fixed">
+  <origin xyz="-0.011415 -0.169849 0.034597" rpy="0 0 0"/>
+  <parent link="arm_4"/>
+  <child link="motor_2"/>
+</joint>
+
+<joint name="r_10" type="fixed">
+  <origin xyz="0.169817 0.01027 0.035108" rpy="0 0 0"/>
+  <parent link="arm_2"/>
+  <child link="motor_4"/>
+</joint>
+
+<joint name="r_11" type="fixed">
+  <origin xyz="-0.010367 0.169863 0.034858" rpy="0 0 0"/>
+  <parent link="arm_5"/>
+  <child link="motor_1"/>
+</joint>
+
+<joint name="rev_1" type="continuous">
+  <origin xyz="-6.4e-05 -2.4e-05 0.031" rpy="0 0 0"/>
+  <parent link="motor_3"/>
+  <child link="propellor_1_1"/>
+  <axis xyz="0.002061 0.000759 -0.999998"/>
+</joint>
+
+<joint name="rev_2" type="continuous">
+  <origin xyz="-6.4e-05 -2.4e-05 0.031" rpy="0 0 0"/>
+  <parent link="motor_1"/>
+  <child link="propellor_2_2"/>
+  <axis xyz="0.002061 0.000759 -0.999998"/>
+</joint>
+
+<joint name="rev_3" type="continuous">
+  <origin xyz="-6.4e-05 -2.3e-05 0.031" rpy="0 0 0"/>
+  <parent link="motor_2"/>
+  <child link="propellor_1_2"/>
+  <axis xyz="0.002061 0.000759 -0.999998"/>
+</joint>
+
+<joint name="rev_4" type="continuous">
+  <origin xyz="-6.4e-05 -2.4e-05 0.031" rpy="0 0 0"/>
+  <parent link="motor_4"/>
+  <child link="propellor_2_1"/>
+  <axis xyz="0.002061 0.000759 -0.999998"/>
+</joint>
+
+<gazebo>
+  <plugin name='gz::sim::systems::MulticopterMotorModel' filename='gz-sim-multicopter-motor-model-system'>
+    <robotNamespace>f450b</robotNamespace>
+    <jointName>rev_4</jointName>
+    <linkName>propellor_2_1</linkName>
+    <turningDirection>cw</turningDirection>
+    <timeConstantUp>0.0125</timeConstantUp>
+    <timeConstantDown>0.025</timeConstantDown>
+    <maxRotVelocity>5000.0</maxRotVelocity>
+    <motorConstant>8.54858e-06</motorConstant>
+    <momentConstant>0.016</momentConstant>
+    <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+    <actuator_number>0</actuator_number>
+    <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+    <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+    <motorSpeedPubTopic>motor_speed/0</motorSpeedPubTopic>
+    <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    <motorType>velocity</motorType>
+  </plugin> 
+
+  <plugin name='gz::sim::systems::MulticopterMotorModel' filename='gz-sim-multicopter-motor-model-system'>
+    <robotNamespace>f450b</robotNamespace>
+    <jointName>rev_2</jointName>
+    <linkName>propellor_2_2</linkName>
+    <turningDirection>cw</turningDirection>
+    <timeConstantUp>0.0125</timeConstantUp>
+    <timeConstantDown>0.025</timeConstantDown>
+    <maxRotVelocity>5000.0</maxRotVelocity>
+    <motorConstant>8.54858e-06</motorConstant>
+    <momentConstant>0.016</momentConstant>
+    <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+    <actuator_number>1</actuator_number>
+    <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+    <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+    <motorSpeedPubTopic>motor_speed/1</motorSpeedPubTopic>
+    <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    <motorType>velocity</motorType>
+  </plugin>
+
+
+  <plugin name='gz::sim::systems::MulticopterMotorModel' filename='gz-sim-multicopter-motor-model-system'>
+    <robotNamespace>f450b</robotNamespace>
+    <jointName>rev_1</jointName>
+    <linkName>propellor_1_1</linkName>
+    <turningDirection>ccw</turningDirection>
+    <timeConstantUp>0.0125</timeConstantUp>
+    <timeConstantDown>0.025</timeConstantDown>
+    <maxRotVelocity>5000.0</maxRotVelocity>
+    <motorConstant>8.54858e-06</motorConstant>
+    <momentConstant>0.016</momentConstant>
+    <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+    <actuator_number>2</actuator_number>
+    <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+    <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+    <motorSpeedPubTopic>motor_speed/2</motorSpeedPubTopic>
+    <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    <motorType>velocity</motorType>
+  </plugin>
+
+  
+
+  <plugin name='gz::sim::systems::MulticopterMotorModel' filename='gz-sim-multicopter-motor-model-system'>
+    <robotNamespace>f450b</robotNamespace>
+    <jointName>rev_3</jointName>
+    <linkName>propellor_1_2</linkName>
+    <turningDirection>ccw</turningDirection>
+    <timeConstantUp>0.0125</timeConstantUp>
+    <timeConstantDown>0.025</timeConstantDown>
+    <maxRotVelocity>5000.0</maxRotVelocity>
+    <motorConstant>8.54858e-06</motorConstant>
+    <momentConstant>0.016</momentConstant>
+    <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+    <actuator_number>3</actuator_number>
+    <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+    <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+    <motorSpeedPubTopic>motor_speed/3</motorSpeedPubTopic>
+    <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    <motorType>velocity</motorType>
+  </plugin>
+
+  
+</gazebo>
+</robot>

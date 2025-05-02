@@ -1,0 +1,12 @@
+
+- ros_topic_name: "/f450b/imu"                # Tópico en ROS 2
+  gz_topic_name: "/imu"                      # Tópico en Gazebo
+  ros_type_name: "sensor_msgs/msg/Imu"       # Tipo de mensaje en ROS 2 para IMU
+  gz_type_name: "gz.msgs.IMU"                # Tipo de mensaje en Gazebo para IMU
+  direction: GZ_TO_ROS  # Dirección de los mensajes, en este caso de Gazebo a ROS
+
+- ros_topic_name: "/gazebo/command/motor_speed"      # Tópico en ROS2 para el control de los motores
+  gz_topic_name: "/f450b/gazebo/command/motor_speed"
+  ros_type_name: "actuator_msgs/msg/Actuators"                 # Tipo de mensaje en ROS2
+  gz_type_name: "gz.msgs.Actuators"                  # Tipo de mensaje en Gazebo
+  direction: ROS_TO_GZ                              # Dirección de los mensajes (de ROS a Gazebo)
