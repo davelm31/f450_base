@@ -28,17 +28,17 @@ source install/setup.bash
 
 ## 🧱 Paso 3: Generar URDF y SDF
 
-Navega al directorio del paquete `f450_description`:
+Navega al directorio del paquete `f450_base`:
 
 ```bash
-cd ~/ros2_ws/src/f450_description
+cd ~/ros2_ws/src/f450_base
 ```
 
 Ejecuta los siguientes comandos para generar el modelo:
 
 ```bash
-xacro urdf/f450.xacro > urdf/f450.urdf
-gz sdf -p urdf/f450.urdf > models/f450/model.sdf
+xacro urdf/f450b.xacro > urdf/f450b.urdf
+gz sdf -p urdf/f450b.urdf > models/f450b/model.sdf
 ```
 
 > Asegúrate de tener instalado `xacro` y `gz` (Gazebo Tools).
@@ -51,20 +51,8 @@ Edita el archivo `worlds/empty_world.world` y reemplaza la antigua referencia de
 
 ```xml
 <include>
-  <uri>model://f450</uri>
+  <uri>model://f450b</uri>
 </include>
-```
-
----
-
-## ✅ Verificación
-
-- Asegúrate de que el modelo aparezca correctamente en Gazebo.
-- Verifica que `models/f450/model.sdf` sea el archivo más reciente.
-- Si es necesario, exporta la variable de entorno `GAZEBO_MODEL_PATH`:
-
-```bash
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/ros2_ws/src/f450_description/models
 ```
 
 ---
