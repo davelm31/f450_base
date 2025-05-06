@@ -10,3 +10,16 @@
   ros_type_name: "actuator_msgs/msg/Actuators"                 # Tipo de mensaje en ROS2
   gz_type_name: "gz.msgs.Actuators"                  # Tipo de mensaje en Gazebo
   direction: ROS_TO_GZ                              # Dirección de los mensajes (de ROS a Gazebo)
+
+- ros_topic_name: "/gazebo/command/twist"       # Tópico en ROS 2 desde el cual publicarás comandos de velocidad
+  gz_topic_name: "/f450b/gazebo/command/twist"        # Debe coincidir con el <commandSubTopic> del plugin
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+
+- ros_topic_name: "/odom"                     # Tópico en ROS 2
+  gz_topic_name: "/f450b/odom"                # Tópico en Gazebo
+  ros_type_name: "nav_msgs/msg/Odometry"      # Tipo de mensaje en ROS 2 para Odometry
+  gz_type_name: "gz.msgs.Odometry"            # Tipo de mensaje en Gazebo para Odometry
+  direction: GZ_TO_ROS                        # Dirección de los mensajes, en este caso de Gazebo a ROS 2

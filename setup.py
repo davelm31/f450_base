@@ -35,6 +35,9 @@ setup(
             'aceleracion  = f450_base.aceleracion:main',
             'control  = f450_base.control:main',
             'Altura_Torque  = f450_base.Altura_Torque:main',
+            'pose  = f450_base.pose:main',
+            'CAltura_odom  = f450_base.CAltura_odom:main',
+            'Control_Odom  = f450_base.Control_Odom:main',
         ],
     },
 )
